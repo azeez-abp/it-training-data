@@ -1,0 +1,36 @@
+#! /usr/bin/bash
+set -e
+#stat %U var/www/storage
+chmod -R 777 storage
+chmod -R 765 bootstrap
+#chmod -R 765 vendor
+echo the permission of the storage directory has been change to 765 
+docker-compose down && docker-compose build && docker-compose  up -d
+# chown -R www /var/www/storage
+# chown -R www /var/www/bootstrap/cache
+#docker-compose exec web_emb ln -s /etc/nginx/sites-available /etc/nginx/sites-enabled
+#docker-compose exec web_emb ufw allow proto tcp from any to any port 80,443
+docker-compose exec app_emb php artisan  key:generate
+sleep 2
+docker-compose exec app_emb php artisan key:generate
+echo Application key generated
+docker-compose exec app_emb php artisan config:clear
+sleep 2
+docker-compose exec app_emb php artisan config:clear
+echo var/wwww/ config is clear
+sleep 2
+docker-compose exec app_emb php artisan config:cache
+sleep 2
+docker-compose exec app_emb php artisan config:cache
+echo var/wwww/ config is regenerated
+sleep 2
+docker-compose exec app_emb php artisan migrate
+docker-compose exec app_emb php artisan migrate
+echo Database migration \done
+sleep 2
+#docker-compose exec app_emb php -S 127.0.0.1:801
+#run this to deploy on docker
+#cd C:/Users/BONJOUREX/Desktop/Code-project/project1/installer/install
+# For example, the following command will change the ownership of a file named file1 to a new owner named linuxize:
+
+# chown linuxize file1

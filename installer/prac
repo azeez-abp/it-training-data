@@ -1,0 +1,141 @@
+#! /usr/bin/bash
+# the above is the bash path that will run your code run which bash or which sh to se the path
+# Segmentation error mean that path above is not match
+#-a into array
+# -f =>file -w write permission -r read permission -x excute
+#[. [ =>test
+
+################if then else
+# if [ ... ]
+# then
+#   # if-code
+# else
+#   # else-code
+# fi
+#Note that fi is if backwards! This is used again later with case and esac
+#Also, be aware of the syntax - the "if [ ... ]" and the "then" commands must be on different lines. Alternatively, the semicolon ";" can separate them:
+# if [ ... ]; then
+#   # do something
+# fi
+set -e
+echo "READING"
+for i in 1 2 3 4 5
+do
+  echo "Looping ... number $i"
+done
+echo  enter password  #| bc #bc math
+read -sp PASS_WORD # -ps on read make it hide
+echo "$PASS_WORD" " " is hidden
+if [ "$PASS_WORD" != "/etc/passwd" ]; then
+      echo "the password $PASS_WORD is not /etc/passwd"
+fi
+echo -en "Please guess the magic number: "
+read X
+echo $X | grep "[^0-9]" > /dev/null 2>&1
+if [ "$?" -eq "0" ]; then  #; put them on the same line
+  # If the grep found something other than 0-9
+  # then it's not an integer.
+  echo "Sorry, wanted a number"
+else
+  # The grep found only 0-9, so it's an integer. 
+  # We can safely do a test on it.
+  if [ "$X" -eq "7" ]; then
+    echo "You entered the magic number!"
+  fi
+fi
+# -z string is null
+while [ -z "$git_url" ] :
+do
+       echo -e What is the git repo url?
+       read git_url 
+done
+echo Your repo url is $git_url
+
+if [$git_url grep "https:git/"]
+then
+echo Not a valid git repo
+else echo We are cloning now
+fi
+git clone "$git_url" 
+#scale  = 30 ie 30 decimal place
+#bc math
+#() array literal
+os = ('window','linux','redora')
+echo $os
+echo ${os[@]} 
+echo ${#os[@]}
+echo ${!os[@]}
+
+for i in {2..50..3}
+do
+echo $i
+done
+
+
+
+
+# Ex- A regex looks like
+
+# /t[aeiou]l/
+
+# . or Dot will match any character
+
+# [ ]        will match a range of characters
+
+# [^ ]      will match all character except for the one mentioned in braces
+
+# *          will match zero or more of the preceding items
+
+
+# +         will match one or more of the preceding items
+
+# ?     will match zero or one of the preceding items
+
+# {n}      will match ‘n’ numbers of preceding items
+
+# {n,}     will match ‘n’ number of or more of preceding items
+
+# {n m}  will match between ‘n’ & ‘m’ number of items
+
+# { ,m}   will match less than or equal to m number of items
+
+# $ = argument $1 arg 1. $2 arg 2
+# for directory in *
+# do
+#   if [[ -d directory ]] #if is derectory
+#     then
+#      echo -d $directory -foregroundcolor red 
+#  fi
+#  done
+# $$ process id
+echo $$
+
+ function action(){
+ echo $1 is called
+ 
+echo are you using git
+read option_git
+echo enter "yes or y"
+for f in *.txt; do grep "tasks:" $f || echo $f; done
+if [[ $option_git == "yes" ]] ||  [[ $option_git == "y" ]]
+then
+    while [ -z "$REPO" ]
+    do 
+    echo "ENTER REPO URL" #-foregroundcolor green
+    read  REPO
+    done
+
+# =~ match regex value
+    if [[ $REPO =~ "^https:\/\/.+git.+\.(com|git)$" ]] #we use double braket should in case the variable is more than one word
+    then
+        git clone "$REPO" .
+    else 
+        echo $REPO is not a valid git repo
+    fi
+
+fi
+
+ }
+
+action first_argument
+

@@ -1,0 +1,11 @@
+#! /usr/bin/bash
+ set -e
+ if [[ sh -c 'git --version' =~ '(git version)+\D+\d{1}\.'  ]]
+ then
+  echo git install
+ else 
+  echo git not install
+  fi
+
+ git clone 
+
