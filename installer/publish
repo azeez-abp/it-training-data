@@ -1,16 +1,16 @@
-#! /usr/bin/bash
+#! /bin/bash
 set -e
 
 
 
-rm -r site
+#rm -r site
 
  function cloneRepo(){
-    mkdirv site
-    sleep 2
-    git clone https://github.com/azeez-abp/it-training-data.git ./site
-    sleep 2
-    mv ./site/* .
+  #  mkdirv site
+    #sleep 2
+    #git clone https://github.com/azeez-abp/it-training-data.git ./site
+    #sleep 2
+    #mv ./site/* .
     composer install
     sleep 2
     php artisan key:generate
