@@ -4,61 +4,7 @@
 <head>
     <title>Custom Auth in Laravel</title>
     @vite('resources/css/app.css')
-    <style type="text/css">
-        .bgi1 {
-            background-image: url(images/logo/back.png);
-            background: radial-gradient(ellipse farthest-corner at 90% 90%,
-                    red,
-                    yellow 10%,
-                    #1e90ff 50%,
-                    beige);
 
-        }
-
-        .top-right {
-            top: 12px;
-            right: 12px;
-            transition: transform .6s ease-in-out;
-            animation: toast-in-right .7s;
-        }
-
-        .bottom-right {
-            bottom: 12px;
-            right: 12px;
-            transition: transform .6s ease-in-out;
-            animation: toast-in-right .7s;
-        }
-
-        .top-left {
-            top: 12px;
-            left: 12px;
-            transition: transform .6s ease-in;
-            animation: toast-in-left .7s;
-        }
-
-        .bottom-left {
-            bottom: 12px;
-            left: 12px;
-            transition: transform .6s ease-in;
-            animation: toast-in-left .7s;
-        }
-
-        .success {
-            background-color: #5cb85c;
-        }
-
-        .danger {
-            background-color: #d9534f;
-        }
-
-        .info {
-            background-color: #5bc0de;
-        }
-
-        .warning {
-            background-color: #f0ad4e;
-        }
-    </style>
 </head>
 
 <body class="bgi1">

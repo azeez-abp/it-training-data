@@ -6,7 +6,13 @@ module.exports = {
     "./resources/**/*.vue",
   ],
   theme: {
-    extend: {},
+
+    extend: {
+      colors :{
+      'blackOpacity':"rgba(0,0,0,.5)"
+    }
+    },
+   
   },
   plugins: [],
 }

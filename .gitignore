@@ -17,4 +17,5 @@ yarn-error.log
 /.idea
 /.vscode
 /data_emb
+/.env-cpanel
 

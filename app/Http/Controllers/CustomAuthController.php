@@ -34,7 +34,7 @@ class CustomAuthController extends Controller
 
         ];
         $remember = $request->get('remember');
-        if (Auth::attempt($credentials, $remember)) {
+        if (Auth::guard('web')->attempt($credentials, $remember)) {
             return redirect()->intended('dashboard')
                 ->withSuccess('Signed in');
         }
@@ -49,11 +49,14 @@ class CustomAuthController extends Controller
 
     public function customRegistration(Request $request)
     {
+        // dd($request->all());
+        // exit;
+
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:6',
-            'level_of_eduction' => 'required',
+            'level_of_education' => 'required',
             'ward' => 'required',
             'phone_number' => 'required',
 
@@ -63,26 +66,38 @@ class CustomAuthController extends Controller
         );
 
         $data = $request->all();
+
         $check = $this->create($data);
 
-        return redirect("dashboard")->withSuccess('You have signed-in');
+        return redirect("login")->withSuccess('Registration successful, Login here');
     }
 
     public function create(array $data)
     {
+
+        if (User::where('email', $data['email'])->first()) {
+            return redirect("registration")->withErrors($data['email'] . ' Already exist');
+        }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'level_of_education' => $data['level_of_education'],
+            'ward' => $data['ward'],
+            'phone_number' => $data['phone_number'],
             'password' => Hash::make($data['password'])
         ]);
     }
 
     public function dashboard()
     {
-        if (Auth::check()) {
-            return view('dashboard');
+        if (Auth::guard('web')->check()) {
+            //dd(get_class_methods(new Session()));
+            return view('components.user.dashboard');
         }
-
+        ///session guard which maintains state using session storage and cookies.
+        //Providers define how users are retrieved from your persistent storage.
+        // Laravel ships with support for retrieving users using Eloquent and the database query builder
         return redirect("login")->withSuccess('You are not allowed to access');
     }
 
@@ -94,7 +109,7 @@ class CustomAuthController extends Controller
     public function signOut()
     {
         Session::flush();
-        Auth::logout();
+        Auth::guard('web')->logout();
 
         return Redirect('login');
     }

@@ -18,8 +18,13 @@
             @csrf
             @if($errors)
             @foreach($errors->all() as $message)
-            <x-toast type='danger' title='Login Error' message='{{$message }}' />
+            <x-toast type='danger' title='Login Error' message='{{$message }}' className="top-left" />
             @endforeach
+            @endif
+
+
+            @if(session('success'))
+            <x-toast type='danger' title='Login Error' message="{{session('success')}}" className="top-left" />
             @endif
             <input type="hidden" name="remember" value="true">
             <div class="-space-y-px rounded-md shadow-sm">
@@ -62,7 +67,7 @@
 
 
 <?php
-// 
+/*<x-user.login error="{{json_encode($errors)}}" endPoint="{{route('login.custom')}}" /> */
 ?>
-<!-- <x-user.login error="{{json_encode($errors)}}" endPoint="{{route('login.custom')}}" /> -->
+
 @endsection

@@ -6,23 +6,23 @@ set -e
 rm -r site
 
  function cloneRepo(){
-    git clone https://github.com/azeez-abp/it-training-data.git /site
+    mkdirv site
     sleep 2
-    mv ./site/* ./
+    git clone https://github.com/azeez-abp/it-training-data.git ./site
+    sleep 2
+    mv ./site/* .
     composer install
     sleep 2
-    npm install
-    sleep 2
-    npm run build
     php artisan key:generate
     sleep 2
-    cp ./.env.host ./.env
+    cp ./.env.cpanel ./.env
     sleep 2
     php artisan config:clear
     php artisan config:cache
+    php artisan migrate
     touch .htaccess
 echo "<ifModule mod_rewrite.c> 
-    RewriteEgine on
+    RewriteEngine on
     RewriteRule ^(.*) public/$1 [L] 
 </ifModule>" >> ./.htaccess
 
@@ -38,7 +38,7 @@ echo "<ifModule mod_rewrite.c>
      apt install git-all
   fi
 
-echo $HOME
+
 # git init --bare $HOME/.cfg
 # alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # config config --local status.showUntrackedFiles no
