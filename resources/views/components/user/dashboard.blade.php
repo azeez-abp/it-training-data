@@ -14,7 +14,7 @@
 <!--  -->
 <div class="main-wrapper">
 
-    <header class="fixed left-0 right-0 top-0 bg-gradient-to-r from-[#ff9b44] to-[#fc6075] dark:bg-gradient-to-r dark:from-[#16191c] dark:to-[#16191c] h-[60px] flex items-center border-b border-transparent dark:border-[#2e3840] shadow-header z-[9999]">
+    <header class="fixed left-0 right-0 top-0 bg-gradient-to-b from-[#000] to-[#0007]  dark:from-[#16191c] dark:to-[#16191c] h-[60px] flex items-center border-b border-transparent dark:border-[#2e3840] shadow-header z-[9999]">
 
         <div class="logo media-max-w-md:max-w-full max-w-[230px] w-full media-max-w-md:absolute px-5 transition-all ease-in-out duration-[0.2s]">
             <a href="index.html">
@@ -32,7 +32,7 @@
         </a>
 
         <div class="px-5 media-max-w-lg:hidden">
-            <h3 class="text-[20px] font-normal text-white dark:text-swapText leading-[1.2]">Dreamguy's Technologies</h3>
+            <h3 class="text-[20px] font-normal text-white dark:text-swapText leading-[1.2]">Embrace Info-Tech</h3>
         </div>
 
         <a id="mobile_btn" class="media-min-w-md:hidden px-5 w-[60px] h-[60px] leading-[60px] absolute top-0 left-0 text-white dark:text-swapText text-2xl" href="#sidebar"><i class="fa fa-bars"></i></a>
@@ -156,9 +156,9 @@
 
                     </a>
                     <div x-show="profile" class="py-2 bg-white absolute hidden right-0 border border-dropdownBorder shadow rounded-sm min-w-[130px] w-full overflow-y-auto z-50">
-                        <a href="profile.html" class="px-3 py-1 flex items-center text-[13px] capitalize hover:text-dropdownColor hover:bg-dropdownhoverColor">my profile</a>
+                        <a href="/profile" class="px-3 py-1 flex items-center text-[13px] capitalize hover:text-dropdownColor hover:bg-dropdownhoverColor">my profile</a>
                         <a href="settings.html" class="px-3 py-1 flex items-center text-[13px] capitalize hover:text-dropdownColor hover:bg-dropdownhoverColor">settings</a>
-                        <a href="index.html" class="px-3 py-1 flex items-center text-[13px] capitalize hover:text-dropdownColor hover:bg-dropdownhoverColor">logout</a>
+                        <a href="/logout" class="px-3 py-1 flex items-center text-[13px] capitalize hover:text-dropdownColor hover:bg-dropdownhoverColor">logout</a>
                     </div>
                 </li>
             </ul>
@@ -174,360 +174,114 @@
 
 
     <!-- sidebar start -->
-    <div class="sidebar bg-sidebar dark:bg-swapBg media-max-w-md:-ml-[225px] media-max-w-md:w-[225px] transition-all ease-in-out duration-[0.2s] w-[230px] fixed top-[60px] bottom-0 left-0 py-[10px] z-[401]" id="sidebar">
-        <div class="h-full pb-5 scrollbar-thin scrollbar-thumb-scrollbar scroll">
-            <div id="sidebar-menu" class="sidebar-menu">
-                <ul>
-                    <li class="menu-title">
-                        <span>Main</span>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;" class="active"><i class="la la-dashboard"></i> <span> Dashboard</span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span>
-                            </span></a>
-                        <ul style="display: none;">
-                            <li><a href="admin-dashboard.html" class="active">Admin Dashboard</a></li>
-                            <li><a href="employee-dashboard.html">Employee Dashboard</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-cube"></i> <span> Apps</span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="chat.html">Chat</a></li>
-                            <li class="submenu relative">
-                                <a href="javascript:;"><span> Calls</span> <span class="absolute right-[10px]"><span class="relative material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                                <ul style="display: none;">
-                                    <li><a href="voice-call.html">Voice Call</a></li>
-                                    <li><a href="video-call.html">Video Call</a></li>
-                                    <li><a href="outgoing-call.html">Outgoing Call</a></li>
-                                    <li><a href="incoming-call.html">Incoming Call</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="events.html">Calendar</a></li>
-                            <li><a href="contacts.html">Contacts</a></li>
-                            <li><a href="inbox.html">Email</a></li>
-                            <li><a href="file-manager.html">File Manager</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-title">
-                        <span>Employees</span>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;" class="noti-dot before:w-[5px] before:h-[5px] before:bg-primary before:border-[5px] before:border-primary before:rounded-[30px] before:absolute before:right-[37px] before:top-[15px] after:border-[3px] after:border-primary after:bg-transparent after:rounded-[60px] after:w-3 after:h-3 after:absolute after:top-[14px] after:right-[36px] after:animate-customPulse">
-                            <i class="la la-user"></i> <span> Employees</span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span>
-                            </span></a>
-                        <ul style="display: none;">
-                            <li><a href="employees.html">All Employees</a></li>
-                            <li><a href="holidays.html">Holidays</a></li>
-                            <li><a href="leaves.html" class="flex justify-between">Leaves (Admin) <span class="bg-primary text-white dark:text-swapText font-bold float-right rounded-[50rem] w-[18px] h-[18px] flex items-center justify-center text-[0.75em]">1</span></a></li>
-                            <li><a href="leaves-employee.html">Leaves (Employee)</a></li>
-                            <li><a href="leave-settings.html">Leave Settings</a></li>
-                            <li><a href="attendance.html">Attendance (Admin)</a></li>
-                            <li><a href="attendance-employee.html">Attendance (Employee)</a></li>
-                            <li><a href="departments.html">Departments</a></li>
-                            <li><a href="designations.html">Designations</a></li>
-                            <li><a href="timesheet.html">Timesheet</a></li>
-                            <li><a href="shift-scheduling.html">Shift &amp; Schedule</a></li>
-                            <li><a href="overtime.html">Overtime</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="clients.html"><i class="la la-users"></i> <span>Clients</span></a>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-rocket"></i> <span> Projects</span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="projects.html">Projects</a></li>
-                            <li><a href="tasks.html">Tasks</a></li>
-                            <li><a href="task-board.html">Task Board</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="leads.html"><i class="la la-user-secret"></i> <span>Leads</span></a>
-                    </li>
-                    <li>
-                        <a href="tickets.html"><i class="la la-ticket"></i> <span>Tickets</span></a>
-                    </li>
-                    <li class="menu-title">
-                        <span>HR</span>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-files-o"></i> <span> Sales </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="estimates.html">Estimates</a></li>
-                            <li><a href="invoices.html">Invoices</a></li>
-                            <li><a href="payments.html">Payments</a></li>
-                            <li><a href="expenses.html">Expenses</a></li>
-                            <li><a href="provident-fund.html">Provident Fund</a></li>
-                            <li><a href="taxes.html">Taxes</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-files-o"></i> <span> Accounting </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="categories.html">Categories</a></li>
-                            <li><a href="budgets.html">Budgets</a></li>
-                            <li><a href="budget-expenses.html">Budget Expenses</a></li>
-                            <li><a href="budget-revenues.html">Budget Revenues</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-money"></i> <span> Payroll </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="salary.html"> Employee Salary </a></li>
-                            <li><a href="salary-view.html"> Payslip </a></li>
-                            <li><a href="payroll-items.html"> Payroll Items </a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="policies.html"><i class="la la-file-pdf-o"></i> <span>Policies</span></a>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-pie-chart"></i> <span> Reports </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="expense-reports.html"> Expense Report </a></li>
-                            <li><a href="invoice-reports.html"> Invoice Report </a></li>
-                            <li><a href="payments-reports.html"> Payments Report </a></li>
-                            <li><a href="project-reports.html"> Project Report </a></li>
-                            <li><a href="task-reports.html"> Task Report </a></li>
-                            <li><a href="user-reports.html"> User Report </a></li>
-                            <li><a href="employee-reports.html"> Employee Report </a></li>
-                            <li><a href="payslip-reports.html"> Payslip Report </a></li>
-                            <li><a href="attendance-reports.html"> Attendance Report </a></li>
-                            <li><a href="leave-reports.html"> Leave Report </a></li>
-                            <li><a href="daily-reports.html"> Daily Report </a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-title">
-                        <span>Performance</span>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-graduation-cap"></i> <span> Performance </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="performance-indicator.html"> Performance Indicator </a></li>
-                            <li><a href="performance.html"> Performance Review </a></li>
-                            <li><a href="performance-appraisal.html"> Performance Appraisal </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-crosshairs"></i> <span> Goals </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="goal-tracking.html"> Goal List </a></li>
-                            <li><a href="goal-type.html"> Goal Type </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-edit"></i> <span> Training </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="training.html"> Training List </a></li>
-                            <li><a href="trainers.html"> Trainers</a></li>
-                            <li><a href="training-type.html"> Training Type </a></li>
-                        </ul>
-                    </li>
-                    <li><a href="promotion.html"><i class="la la-bullhorn"></i> <span>Promotion</span></a></li>
-                    <li><a href="resignation.html"><i class="la la-external-link-square"></i> <span>Resignation</span></a></li>
-                    <li><a href="termination.html"><i class="la la-times-circle"></i> <span>Termination</span></a></li>
-                    <li class="menu-title">
-                        <span>Administration</span>
-                    </li>
-                    <li>
-                        <a href="assets.html"><i class="la la-object-ungroup"></i> <span>Assets</span></a>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-briefcase"></i> <span> Jobs </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="user-dashboard.html"> User Dasboard </a></li>
-                            <li><a href="jobs-dashboard.html"> Jobs Dasboard </a></li>
-                            <li><a href="jobs.html"> Manage Jobs </a></li>
-                            <li><a href="manage-resumes.html"> Manage Resumes </a></li>
-                            <li><a href="shortlist-candidates.html"> Shortlist Candidates </a></li>
-                            <li><a href="interview-questions.html"> Interview Questions </a></li>
-                            <li><a href="offer_approvals.html"> Offer Approvals </a></li>
-                            <li><a href="experiance-level.html"> Experience Level </a></li>
-                            <li><a href="candidates.html"> Candidates List </a></li>
-                            <li><a href="schedule-timing.html"> Schedule timing </a></li>
-                            <li><a href="apptitude-result.html"> Aptitude Results </a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="knowledgebase.html"><i class="la la-question"></i> <span>Knowledgebase</span></a>
-                    </li>
-                    <li>
-                        <a href="activities.html"><i class="la la-bell"></i> <span>Activities</span></a>
-                    </li>
-                    <li>
-                        <a href="users.html"><i class="la la-user-plus"></i> <span>Users</span></a>
-                    </li>
-                    <li>
-                        <a href="settings.html"><i class="la la-cog"></i> <span>Settings</span></a>
-                    </li>
-                    <li class="menu-title">
-                        <span>Pages</span>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-user"></i> <span> Profile </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="profile.html"> Employee Profile </a></li>
-                            <li><a href="client-profile.html"> Client Profile </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-key"></i> <span> Authentication </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="index.html"> Login </a></li>
-                            <li><a href="register.html"> Register </a></li>
-                            <li><a href="forgot-password.html"> Forgot Password </a></li>
-                            <li><a href="otp.html"> OTP </a></li>
-                            <li><a href="lock-screen.html"> Lock Screen </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-exclamation-triangle"></i> <span> Error Pages </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="error-404.html">404 Error </a></li>
-                            <li><a href="error-500.html">500 Error </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-hand-o-up"></i> <span> Subscriptions </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="subscriptions.html"> Subscriptions (Admin) </a></li>
-                            <li><a href="subscriptions-company.html"> Subscriptions (Company) </a></li>
-                            <li><a href="subscribed-companies.html"> Subscribed Companies</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-columns"></i> <span> Pages </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="search.html"> Search </a></li>
-                            <li><a href="faq.html"> FAQ </a></li>
-                            <li><a href="terms.html"> Terms </a></li>
-                            <li><a href="privacy-policy.html"> Privacy Policy </a></li>
-                            <li><a href="blank-page.html"> Blank Page </a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-title">
-                        <span>UI Interface</span>
-                    </li>
-                    <li>
-                        <a href="components.html"><i class="la la-puzzle-piece"></i> <span>Components</span></a>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-object-group"></i> <span> Forms </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="form-basic-inputs.html">Basic Inputs </a></li>
-                            <li><a href="form-input-groups.html">Input Groups </a></li>
-                            <li><a href="form-horizontal.html">Horizontal Form </a></li>
-                            <li><a href="form-vertical.html"> Vertical Form </a></li>
-                            <li><a href="form-mask.html"> Form Mask </a></li>
-                            <li><a href="form-validation.html"> Form Validation </a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:;"><i class="la la-table"></i> <span> Tables </span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li><a href="tables-basic.html">Basic Tables </a></li>
-                            <li><a href="data-tables.html">Data Table </a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-title">
-                        <span>Extras</span>
-                    </li>
-                    <li>
-                        <a href="javascript:;"><i class="la la-file-text"></i> <span>Documentation</span></a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0);"><i class="la la-info"></i> <span>Change Log</span> <span class="inline-block bg-primary !ml-auto leading-none text-white dark:text-swapText rounded py-[0.35em] px-[0.65em] text-[0.75em] font-bold">v3.4</span></a>
-                    </li>
-                    <li class="submenu relative">
-                        <a href="javascript:void(0);"><i class="la la-share-alt"></i> <span>Multi Level</span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                        <ul style="display: none;">
-                            <li class="submenu">
-                                <a href="javascript:void(0);"> <span>Level 1</span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                                <ul style="display: none;">
-                                    <li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-                                    <li class="submenu">
-                                        <a href="javascript:void(0);"> <span> Level 2</span> <span class="absolute right-[10px]"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">navigate_next</span></span></a>
-                                        <ul style="display: none;">
-                                            <li><a href="javascript:void(0);">Level 3</a></li>
-                                            <li><a href="javascript:void(0);">Level 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);"> <span>Level 1</span></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <div class="side-body">
+        <div class="sidebar bg-sidebar dark:bg-swapBg media-max-w-md:-ml-[225px] media-max-w-md:w-[225px] transition-all ease-in-out duration-[0.2s] w-[230px] fixed top-[60px] bottom-0 left-0 py-[10px] z-[401]" id="sidebar">
+            <div class="h-full pb-5 scrollbar-thin scrollbar-thumb-scrollbar scroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
 
 
-    <!-- sidebar end -->
+                        <li class="submenu relative list-parent">
+                            <a href="javascript:;"><i class="la la-cube"></i> <span> Apps</span> <span class="absolute right-[10px] chev"><span class="material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
 
 
+                                    </span></span></a>
+                            <!-- ====================== -->
+                            <ul class="list-child">
+                                <li><a href="chat.html">Chat</a></li>
+                                <li class="submenu relative list-parent">
 
+                                    <a href="javascript:;"><span> Calls</span>
+                                        <span class="absolute right-[10px] chev"><span class="relative material-icons text-lg menu-arrow transition-all ease-in-out duration-[0.2s]">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                                </svg>
+                                            </span></span></a>
+                                    <ul>
 
+                                        <!-- ====================== -->
+                                        <li><a href="voice-call.html">Voice Call</a></li>
+                                        <li><a href="video-call.html">Video Call</a></li>
+                                        <li><a href="outgoing-call.html">Outgoing Call</a></li>
+                                        <li><a href="incoming-call.html">Incoming Call</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="events.html">Calendar</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="inbox.html">Email</a></li>
+                                <li><a href="file-manager.html">File Manager</a></li>
+                            </ul>
+                        </li>
 
-
-
-
-
-    <div class="page-wrapper flex-1 relative left-0 pt-[60px] media-min-w-md:ml-[230px]" style="min-height: 301px;">
-        <div class="p-[15px] sm:p-[30px]">
-
-
-            <div class="page-header mb-[1.875rem]">
-
-                <div class="flex items-center justify-between">
-                    <div>
-                        <h3 class="text-pageTitle dark:text-swapText text-lg sm:text-2xl md:text-[26px] font-medium sm:mb-[5px] leading-[1.2]">Welcome Admin!</h3>
-                        <ul class="hidden text-[14px] md:text-base font-medium sm:flex flex-wrap">
-                            <li class="text-[#6c757d]">Dashboard</li>
-                        </ul>
-                    </div>
+                    </ul>
                 </div>
             </div>
+        </div>
 
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-[30px]">
+        <!-- sidebar end -->
 
-                <div class="shadow-header border border-cardBorder dark:border-swapBorderPrimary relative flex flex-col bg-white dark:bg-swapBg rounded break-words">
-                    <div class="p-4">
-                        <span class="bg-dashboardIconOverlay rounded-full w-[60px] h-[60px] text-primary text-3xl float-left flex items-center justify-center">
-                            <i class="fa fa-cubes"></i>
-                        </span>
-                        <div class="text-right">
-                            <h3 class="font-semibold mb-2 text-3xl dark:text-swapText">112</h3>
-                            <span class="text-base dark:text-swapText">Projects</span>
+
+
+
+
+
+
+
+
+        <div class="page-wrapper flex-1 relative left-0 pt-[60px] media-min-w-md:ml-[230px]" style="min-height: 301px;">
+            <div class="p-[15px] sm:p-[30px]">
+
+
+                <div class="page-header mb-[1.875rem]">
+
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h3 class="text-pageTitle dark:text-swapText text-lg sm:text-2xl md:text-[26px] font-medium sm:mb-[5px] leading-[1.2]">Welcome Admin!</h3>
+                            <ul class="hidden text-[14px] md:text-base font-medium sm:flex flex-wrap">
+                                <li class="text-[#6c757d]">Dashboard</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
 
 
-                <div class="shadow-header border border-cardBorder dark:border-swapBorderPrimary relative flex flex-col bg-white dark:bg-swapBg rounded break-words">
-                    <div class="p-4">
-                        <span class="bg-dashboardIconOverlay rounded-full w-[60px] h-[60px] text-primary text-3xl float-left flex items-center justify-center">
-                            <i class="fa fa-usd"></i>
-                        </span>
-                        <div class="text-right">
-                            <h3 class="font-semibold mb-2 text-3xl dark:text-swapText">44</h3>
-                            <span class="text-base dark:text-swapText">Clients</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-[30px]">
+
+                    <div class="shadow-header border border-cardBorder dark:border-swapBorderPrimary relative flex flex-col bg-white dark:bg-swapBg rounded break-words">
+                        <div class="p-4">
+                            <span class="bg-dashboardIconOverlay rounded-full w-[60px] h-[60px] text-primary text-3xl float-left flex items-center justify-center">
+                                <i class="fa fa-cubes"></i>
+                            </span>
+                            <div class="text-right">
+                                <h3 class="font-semibold mb-2 text-3xl dark:text-swapText">112</h3>
+                                <span class="text-base dark:text-swapText">Projects</span>
+                            </div>
                         </div>
                     </div>
+
+
+                    <div class="shadow-header border border-cardBorder dark:border-swapBorderPrimary relative flex flex-col bg-white dark:bg-swapBg rounded break-words">
+                        <div class="p-4">
+                            <span class="bg-dashboardIconOverlay rounded-full w-[60px] h-[60px] text-primary text-3xl float-left flex items-center justify-center">
+                                <i class="fa fa-usd"></i>
+                            </span>
+                            <div class="text-right">
+                                <h3 class="font-semibold mb-2 text-3xl dark:text-swapText">44</h3>
+                                <span class="text-base dark:text-swapText">Clients</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
-
-
-
             </div>
+            <!--  -->
+
         </div>
-        <!--  -->
-
-        <body>
-
-        </body>
 
 </html>
