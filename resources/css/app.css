@@ -171,7 +171,7 @@
     transition: max-height 500ms linear;
 }
 /* Sidebar and boy */
-.w-\[0px\]{
+.side-bar-zero{
   width: 0px;
   transition: width 3ms ease-in-out;
 }
