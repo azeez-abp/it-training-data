@@ -79,11 +79,13 @@
                     @endif
                 </div>
                 <div class="mb-8">
-                    <x-forms.input r="{{true}}" t="password" name="password" p="Password" id="pasword" className="relative block w-full appearance-none  rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" children="
+                    <input type="text" placeholder="Pasword" id="password" class="relative block w-full appearance-none  rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" name="pasword" required autofocus>
+
+                    <!-- <x-forms.input r="{{true}}" t="password" name="password" p="Password" id="pasword" className="relative block w-full appearance-none  rounded-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm" children="
                              @if($errors->first('password'))
                              <x-toast type='danger' title='Password error' message='{{ $errors->first('password').' by toast' }}' /> 
                              @endif
-                              " />
+                              " /> -->
                 </div>
 
 

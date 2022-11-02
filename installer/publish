@@ -3,19 +3,19 @@ set -e
 
 
 
-#rm -r site
+  [ -d "./site" ] && rm -r site/*
 
  function cloneRepo(){
-  #  mkdirv site
+   
     #sleep 2
-    git fetch https://github.com/azeez-abp/it-training-data.git master
+    git clone https://github.com/azeez-abp/it-training-data.git /site
     #sleep 2
     #mv ./site/* .
     composer install
     sleep 2
     php artisan key:generate
     sleep 2
-    cp ./.env.cpanel ./.env
+    #cp ./.env.cpanel ./.env
     sleep 2
     php artisan config:clear
     php artisan config:cache
@@ -24,19 +24,20 @@ set -e
 echo "<ifModule mod_rewrite.c> 
     RewriteEngine on
     RewriteRule ^(.*) public/$1 [L] 
-</ifModule>" >> ./.htaccess
+</ifModule>" > ./.htaccess
 
     
  }
- if [[ `git --version =~ "(git version)+\D\d\.\d{2}\.+.+"` ]]
- then
-   cloneRepo
-   echo "CLONING DONE"
- else 
-    #install git
-    echo "Git wil be intsall"
-     apt install git-all
-  fi
+ cloneRepo
+#  if [[ `git --version =~ "(git version)+\D\d\.\d{2}\.+.+"` ]]
+#  then
+   
+#   echo "CLONING DONE"
+#  else 
+#     #install git
+#     echo "Git wil be intsall"
+#      apt install git-all
+#   fi
 
 
 # git init --bare $HOME/.cfg
