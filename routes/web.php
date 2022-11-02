@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Redirect;
 | Web Routes
 |--------------------------------------------------------------------------
 */
-
+#https://careers.microsoft.com/us/en/applythankyou?jobSeqNo=1314893
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']);
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::get('/', [CustomAuthController::class, 'index'])->name('login');
