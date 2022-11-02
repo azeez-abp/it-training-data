@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYMENTPATH = /home/embrcwha/training.embraceitech.com.ng
+    - /bin/cp    /home/embrcwha/repo/it-training-data/* $DEPLOYMENTPATH
