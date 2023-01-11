@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Redirect;
 
 
 
-/*
+/*PUT update all value
+ PATCH update on changed value
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -38,3 +39,5 @@ Route::get('/forget-pass/{auth:slug}', [CustomAuthController::class, 'show'])
     ->missing(function (Request $request) {
         return Redirect::route('auth.login');
     });
+
+//Route::view('/reset-password', 'home.welcome', ['data' => 'here is data', 'other_data' => 'other data']);
